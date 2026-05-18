@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickbait do Bem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <input type="radio" name="navegacao" id="tab-home" checked class="radio-nav">
+    <input type="radio" name="navegacao" id="tab-html" class="radio-nav">
+    <input type="radio" name="navegacao" id="tab-css" class="radio-nav">
+    <input type="radio" name="navegacao" id="tab-referencias" class="radio-nav">
+
+    <input type="radio" name="carrossel" id="slide1" checked class="radio-carrossel">
+    <input type="radio" name="carrossel" id="slide2" class="radio-carrossel">
+
+    <div class="layout-container">
+
+        <header class="main-header">
+            <div class="logo">
+                <div class="busca">
+                    <input type="text" placeholder="PESQUISAR POR..." aria-label="Campo de pesquisa"> 
+                    <button aria-label="Pesquisar">🔍︎</button>
+                </div>
+                <h1>CLICKBAIT DO BEM!</h1>
+                <p>O portal de notícias do povo</p>
+            </div>
+        </header>
+
+    <nav class="menu-topo">
+        <ul>
+            <li><label for="tab-home" tabindex="0" class="label-nav btn-home">HOME</label></li>
+            <li><label for="tab-html" tabindex="0" class="label-nav btn-html">HTML</label></li>
+            <li><label for="tab-css" tabindex="0" class="label-nav btn-css">CSS</label></li>
+            <li><label for="tab-referencias" tabindex="0" class="label-nav btn-referencias">REFERÊNCIAS</label></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo-principal">
+<!--HOME-->
+        <section class="sec-conteudo sec-home">
+            <h2>Principais notícias do dia:</h2>
+<!--Card home 1-->
+            <article class="card-noticia">
+                <span class="tag">APRESENTAÇÃO / GRUPO 6</span>
+                <h3>🚨ALERTA: Alunos foram vistos aplicando CSS avançado sem chorar?</h3>
+                <p>Bem-vindo à página web do <mark>Grupo 6!</mark> Se você achava que desenvolvimento web se resumia em centralizar uma <mark>&lt;div&gt;</mark> (e falhar miseravelmente no processo), prepare-se para ter sua mente explodida.</p>
+                <input type="checkbox" id="expandir-noticia" class="checkbox-expandir">
+                <div class="conteudo-oculto">
+                    <p>Explore a página e descubra o segredo que os desenvolvedores sêniores não querem que você saiba </p>
+                </div>
+                <label for="expandir-noticia" class="btn-ler-mais"></label>
+            </article>
+<!--Card home 2-->
+            <article class="card-noticia">
+                <span class="tag">MOBILE-FIRST</span>
+                <h3>REVOLUÇÃO: Novo site é tão responsivo que roda até na tela da sua geladeira inteligente!</h3>
+                <p>Cansados de criar sites apenas para computadores e celulares? os desenvolvedores do Grupo 6 levaram o conceito <mark>Mobile-Frist</mark> ao extremo.</p>
+                <input type="checkbox" id="expandir-noticia2" class="checkbox-expandir">
+                <div class="conteudo-oculto">
+                    <p>Nosso código foi otimizado semânticamente para funcionar 100% de acessibilidade na tela touch da sua geladeira, no visor do micro-ondas e até no display digital do seu relógio de parede.</p>
+                </div>
+                <label for="expandir-noticia2" class="btn-ler-mais"></label>
+            </article>
+<!--Card home 3-->
+            <article class="card-noticia">
+                <span class="tag">JAVASCRIPT</span>
+                <h3>ESCÂNDALO: Polícia do Código apreende quilos de JavaScript em site que prometia ser CSS puro!</h3>
+                <p>Uma operação rotina na aba Network do navegador descobriu um arquivo oculto chamado <mark>script.js</mark> escondido atrás de um carrossel de cards.</p>
+                <input type="checkbox" id="expandir-noticia3" class="checkbox-expandir">
+                <div class="conteudo-oculto">
+                    <p>O site alegava usar apenas inputs do tipo radio para fazer transições de página, mas os investigadores acharam funções addEventListener altamente perigosas rodando em segundo plano.</p>
+                </div>
+                <label for="expandir-noticia3" class="btn-ler-mais"></label>
+            </article>
+        </section>
+<!--HTML-->
+        <section class="sec-conteudo sec-html">
+            <h2>Semântica e Acessibilidade</h2>
+
+            <div class="carrossel-viewport">
+                <div class="setas-controle">
+                    <label for="slide1" class="seta seta-esq"></label>
+                    <label for="slide2" class="seta seta-dir"></label>
+                </div>
+<!--Card html 1-->
+                    <div class="carrossel-track">
+                        <div class="card-html">
+                            <h4>&lt;header&gt;</h4>
+                            <p>É usado para representar o cabeçalho da página ou de uma seção.</p>
+                        </div>
+<!--Card html 2-->               
+                        <div class="card-html">
+                            <h4>&lt;nav&gt;</h4>
+                            <p>Representa a área de navegação, normalmente contendo menus e links.</p>
+                        </div>
+<!--Card html 3-->              
+                        <div class="card-html">
+                            <h4>&lt;main&gt;</h4>
+                            <p>Define o conteúdo principal da página.</p>
+                        </div>
+<!--Card html 4-->        
+                        <div class="card-html">
+                            <h4>&lt;section&gt;</h4>
+                            <p>Serve para agrupar conteúdos relacionados em seções.</p>
+                        </div>
+<!--Card html 5-->
+                        <div class="card-html">
+                            <h4>&lt;article&gt;</h4>
+                            <p>Representa um conteúdo idependente, como notícias, posts ou artigos.</p>
+                        </div>
+<!--Card html 6-->
+                        <div class="card-html">
+                            <h4>&lt;aside&gt;</h4>
+                            <p>É usado para conteúdos secundários, geralmente laterais.</p>
+                        </div>
+<!--Card html 7-->                 
+                        <div class="card-html">
+                            <h4>&lt;footer&gt;</h4>
+                            <p>Representa o rodapé da página ou de uma seção.</p>
+                        </div>
+<!--Card html 8-->                
+                        <div class="card-html">
+                            <h4>&lt;figure&gt;</h4>
+                            <p>Agrupa imagens, gráficos ou outros elementos visuais.</p>
+                        </div>
+<!--Card html 9-->                
+                        <div class="card-html">
+                            <h4>&lt;figcaption&gt;</h4>
+                            <p>Define a legenda de uma figura ou imagem.</p>
+                        </div>
+<!--Card html 10-->                
+                        <div class="card-html">
+                            <h4>&lt;time&gt;</h4>
+                            <p>Representa datas e horários.</p>
+                        </div>
+<!--Card html 11-->       
+                        <div class="card-html">
+                            <h4>&lt;mark&gt;</h4>
+                            <p>Serve para destacar partes do texto.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+<!--CSS-->
+            <section class="sec-conteudo sec-css">
+
+            </section>
+<!--REFERENCIAS-->
+            <section class="sec-conteudo sec-referencias">
+
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Projeto desenvolvido pelo Grupo 6 -
+            <time datetime="2026-05-22">Maio de 2026</time>
+        </p>
+    </footer>
+    
+</body>
+</html>
