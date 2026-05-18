@@ -164,6 +164,8 @@ body{
 h2{
     font-size:2rem;
     margin-bottom:2rem;
+    color:var(--roxo);
+    font-family: "Gravitas One", serif;
 }
 
 .sec-home{
@@ -195,13 +197,12 @@ h2{
 }
 
 .tag{
-    background:var(--fundo);
+    background:var(--roxo-claro);
     color:var(--roxo);
     padding:0.4rem 0.9rem;
-    border-radius:999px;
+    border-radius:2px;
     font-size:0.9rem;
     font-weight:"Montserrat", sans-serif;
-    font-style: oblique;
     display:inline-block;
 }
 
