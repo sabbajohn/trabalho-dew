@@ -1,169 +1,457 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickbait do Bem</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Clickbait do Bem | Trabalho de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
-
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <input type="radio" name="navegacao" id="tab-home" checked class="radio-nav">
-    <input type="radio" name="navegacao" id="tab-html" class="radio-nav">
-    <input type="radio" name="navegacao" id="tab-css" class="radio-nav">
-    <input type="radio" name="navegacao" id="tab-referencias" class="radio-nav">
+    <header class="site-header">
+        <div class="top-ribbon">
+            <p class="ribbon-label">Edição especial do Grupo 6</p>
+            <p class="ribbon-meta"><time datetime="2026-05-22">Maio de 2026</time> | Projeto em HTML e CSS puro</p>
+        </div>
 
-    <input type="radio" name="carrossel" id="slide1" checked class="radio-carrossel">
-    <input type="radio" name="carrossel" id="slide2" class="radio-carrossel">
-
-    <div class="layout-container">
-
-        <header class="main-header">
-            <div class="logo">
-                <div class="busca">
-                    <input type="text" placeholder="PESQUISAR POR..." aria-label="Campo de pesquisa"> 
-                    <button aria-label="Pesquisar">🔍︎</button>
-                </div>
-                <h1>CLICKBAIT DO BEM!</h1>
-                <p>O portal de notícias do povo</p>
+        <div class="brand-row">
+            <div class="brand-copy">
+                <p class="eyebrow">Portal educativo</p>
+                <h1>Clickbait do Bem</h1>
+                <p class="brand-lead">
+                    Um portal de notícias fictício que explica <mark>semântica</mark>,
+                    <mark>acessibilidade</mark>, <mark>responsividade</mark> e
+                    <mark>animações</mark> com exemplos aplicados na própria interface.
+                </p>
             </div>
-        </header>
 
-    <nav class="menu-topo">
-        <ul>
-            <li><label for="tab-home" tabindex="0" class="label-nav btn-home">HOME</label></li>
-            <li><label for="tab-html" tabindex="0" class="label-nav btn-html">HTML</label></li>
-            <li><label for="tab-css" tabindex="0" class="label-nav btn-css">CSS</label></li>
-            <li><label for="tab-referencias" tabindex="0" class="label-nav btn-referencias">REFERÊNCIAS</label></li>
-        </ul>
-    </nav>
+            <aside class="header-stats" aria-label="Resumo do projeto">
+                <article class="stat-card">
+                    <span class="stat-number">6</span>
+                    <p>Tópicos obrigatórios demonstrados</p>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-number">2</span>
+                    <p>Breakpoints mobile-first em <code>48rem</code> e <code>75rem</code></p>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-number">0</span>
+                    <p>Dependências de JavaScript para navegação ou layout</p>
+                </article>
+            </aside>
+        </div>
 
-    <main class="conteudo-principal">
-<!--HOME-->
-        <section class="sec-conteudo sec-home">
-            <h2>Principais notícias do dia:</h2>
-<!--Card home 1-->
-            <article class="card-noticia">
-                <span class="tag">APRESENTAÇÃO / GRUPO 6</span>
-                <h3>🚨ALERTA: Alunos foram vistos aplicando CSS avançado sem chorar?</h3>
-                <p>Bem-vindo à página web do <mark>Grupo 6!</mark> Se você achava que desenvolvimento web se resumia em centralizar uma <mark>&lt;div&gt;</mark> (e falhar miseravelmente no processo), prepare-se para ter sua mente explodida.</p>
-                <input type="checkbox" id="expandir-noticia" class="checkbox-expandir">
-                <div class="conteudo-oculto">
-                    <p>Explore a página e descubra o segredo que os desenvolvedores sêniores não querem que você saiba </p>
-                </div>
-                <label for="expandir-noticia" class="btn-ler-mais"></label>
-            </article>
-<!--Card home 2-->
-            <article class="card-noticia">
-                <span class="tag">MOBILE-FIRST</span>
-                <h3>REVOLUÇÃO: Novo site é tão responsivo que roda até na tela da sua geladeira inteligente!</h3>
-                <p>Cansados de criar sites apenas para computadores e celulares? os desenvolvedores do Grupo 6 levaram o conceito <mark>Mobile-Frist</mark> ao extremo.</p>
-                <input type="checkbox" id="expandir-noticia2" class="checkbox-expandir">
-                <div class="conteudo-oculto">
-                    <p>Nosso código foi otimizado semânticamente para funcionar 100% de acessibilidade na tela touch da sua geladeira, no visor do micro-ondas e até no display digital do seu relógio de parede.</p>
-                </div>
-                <label for="expandir-noticia2" class="btn-ler-mais"></label>
-            </article>
-<!--Card home 3-->
-            <article class="card-noticia">
-                <span class="tag">JAVASCRIPT</span>
-                <h3>ESCÂNDALO: Polícia do Código apreende quilos de JavaScript em site que prometia ser CSS puro!</h3>
-                <p>Uma operação rotina na aba Network do navegador descobriu um arquivo oculto chamado <mark>script.js</mark> escondido atrás de um carrossel de cards.</p>
-                <input type="checkbox" id="expandir-noticia3" class="checkbox-expandir">
-                <div class="conteudo-oculto">
-                    <p>O site alegava usar apenas inputs do tipo radio para fazer transições de página, mas os investigadores acharam funções addEventListener altamente perigosas rodando em segundo plano.</p>
-                </div>
-                <label for="expandir-noticia3" class="btn-ler-mais"></label>
-            </article>
+        <nav class="main-nav" aria-label="Seções principais">
+            <a href="#home">Home</a>
+            <a href="#html">HTML e Acessibilidade</a>
+            <a href="#css">CSS e Layout</a>
+            <a href="#referencias">Referências</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="site-main">
+        <section id="home" class="section section-home" aria-labelledby="titulo-home">
+            <div class="section-heading">
+                <p class="eyebrow">Abertura</p>
+                <h2 id="titulo-home">O que este trabalho demonstra</h2>
+                <p>
+                    A proposta é apresentar teoria e prática ao mesmo tempo:
+                    cada conceito pedido na atividade aparece explicado e visível no código e no layout.
+                </p>
+            </div>
+
+            <div class="hero-grid">
+                <article class="hero-card spotlight-card">
+                    <span class="card-label">Resumo rápido</span>
+                    <h3>Do HTML semântico ao CSS responsivo</h3>
+                    <p>
+                        Esta página usa estrutura semântica, navegação por âncoras, foco visível,
+                        medidas relativas, cards em Flexbox e Grid, além de transições e animações
+                        para ilustrar como transformar teoria em interface funcional.
+                    </p>
+
+                    <ul class="tag-list" aria-label="Conceitos abordados">
+                        <li>Semântica</li>
+                        <li>Acessibilidade</li>
+                        <li>Flexbox</li>
+                        <li>Grid</li>
+                        <li>Mobile First</li>
+                        <li>Animações</li>
+                    </ul>
+                </article>
+
+                <aside class="hero-card plan-card">
+                    <span class="card-label">Roteiro da apresentação</span>
+                    <ol class="flow-list">
+                        <li>Explicar por que a estrutura HTML semântica melhora leitura e manutenção.</li>
+                        <li>Mostrar como a navegação por teclado foi tratada com skip link e foco visível.</li>
+                        <li>Comparar Flexbox e Grid com exemplos reais da própria página.</li>
+                        <li>Demonstrar medidas fixas e relativas, responsividade e animações.</li>
+                    </ol>
+                </aside>
+            </div>
+
+            <div class="news-grid" aria-label="Destaques do projeto">
+                <article class="news-card">
+                    <span class="card-label">HTML</span>
+                    <h3>Semântica que organiza conteúdo sem depender de gambiarra</h3>
+                    <p>
+                        Cabeçalho, navegação, conteúdo principal, seções, artigos, destaque e rodapé
+                        foram separados com tags apropriadas para deixar o documento mais claro para
+                        pessoas e tecnologias assistivas.
+                    </p>
+                </article>
+
+                <article class="news-card">
+                    <span class="card-label">CSS</span>
+                    <h3>Layout flexível com medidas relativas e breakpoints claros</h3>
+                    <p>
+                        A interface nasce para telas pequenas e evolui com media queries. O uso de
+                        <code>rem</code>, <code>%</code>, <code>vw</code>, <code>vh</code> e
+                        <code>clamp()</code> ajuda a manter leitura, escala e adaptação visual.
+                    </p>
+                </article>
+
+                <article class="news-card">
+                    <span class="card-label">Prática</span>
+                    <h3>Código autoral, navegável e preparado para manutenção</h3>
+                    <p>
+                        O CSS foi dividido em módulos menores e o HTML foi reorganizado em uma página
+                        única. Isso reduz código morto, melhora leitura e deixa o projeto mais fácil
+                        de evoluir.
+                    </p>
+                </article>
+            </div>
         </section>
-<!--HTML-->
-        <section class="sec-conteudo sec-html">
-            <h2>Semântica e Acessibilidade</h2>
 
-            <div class="carrossel-viewport">
-                <div class="setas-controle">
-                    <label for="slide1" class="seta seta-esq"></label>
-                    <label for="slide2" class="seta seta-dir"></label>
-                </div>
-<!--Card html 1-->
-                    <div class="carrossel-track">
-                        <div class="card-html">
-                            <h4>&lt;header&gt;</h4>
-                            <p>É usado para representar o cabeçalho da página ou de uma seção.</p>
-                        </div>
-<!--Card html 2-->               
-                        <div class="card-html">
-                            <h4>&lt;nav&gt;</h4>
-                            <p>Representa a área de navegação, normalmente contendo menus e links.</p>
-                        </div>
-<!--Card html 3-->              
-                        <div class="card-html">
-                            <h4>&lt;main&gt;</h4>
-                            <p>Define o conteúdo principal da página.</p>
-                        </div>
-<!--Card html 4-->        
-                        <div class="card-html">
-                            <h4>&lt;section&gt;</h4>
-                            <p>Serve para agrupar conteúdos relacionados em seções.</p>
-                        </div>
-<!--Card html 5-->
-                        <div class="card-html">
-                            <h4>&lt;article&gt;</h4>
-                            <p>Representa um conteúdo idependente, como notícias, posts ou artigos.</p>
-                        </div>
-<!--Card html 6-->
-                        <div class="card-html">
-                            <h4>&lt;aside&gt;</h4>
-                            <p>É usado para conteúdos secundários, geralmente laterais.</p>
-                        </div>
-<!--Card html 7-->                 
-                        <div class="card-html">
-                            <h4>&lt;footer&gt;</h4>
-                            <p>Representa o rodapé da página ou de uma seção.</p>
-                        </div>
-<!--Card html 8-->                
-                        <div class="card-html">
-                            <h4>&lt;figure&gt;</h4>
-                            <p>Agrupa imagens, gráficos ou outros elementos visuais.</p>
-                        </div>
-<!--Card html 9-->                
-                        <div class="card-html">
-                            <h4>&lt;figcaption&gt;</h4>
-                            <p>Define a legenda de uma figura ou imagem.</p>
-                        </div>
-<!--Card html 10-->                
-                        <div class="card-html">
-                            <h4>&lt;time&gt;</h4>
-                            <p>Representa datas e horários.</p>
-                        </div>
-<!--Card html 11-->       
-                        <div class="card-html">
-                            <h4>&lt;mark&gt;</h4>
-                            <p>Serve para destacar partes do texto.</p>
-                        </div>
+        <section id="html" class="section section-html" aria-labelledby="titulo-html">
+            <div class="section-heading">
+                <p class="eyebrow">HTML e Acessibilidade</p>
+                <h2 id="titulo-html">Semântica, leitura estruturada e navegação por teclado</h2>
+                <p>
+                    Semântica é o uso de elementos HTML com significado. Ela organiza o conteúdo,
+                    facilita a manutenção e melhora a interpretação da página por leitores de tela,
+                    navegadores e motores de busca.
+                </p>
+            </div>
+
+            <div class="content-grid two-column">
+                <article class="panel">
+                    <h3>O que é semântica e por que ela importa</h3>
+                    <ul class="checklist">
+                        <li>Define claramente o papel de cada parte da página.</li>
+                        <li>Melhora a hierarquia de leitura para leitores de tela.</li>
+                        <li>Facilita manutenção porque cada bloco fica previsível.</li>
+                        <li>Ajuda a separar conteúdo principal de conteúdo complementar.</li>
+                    </ul>
+                </article>
+
+                <article class="panel">
+                    <h3>Como melhorar acessibilidade no código</h3>
+                    <ul class="checklist">
+                        <li>Usar títulos em ordem lógica e landmarks como <code>header</code>, <code>nav</code> e <code>main</code>.</li>
+                        <li>Garantir contraste adequado, foco visível e textos compreensíveis.</li>
+                        <li>Evitar controles falsos quando um link comum resolve o problema.</li>
+                        <li>Usar medidas relativas para respeitar zoom e preferências do usuário.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="subsection-heading">
+                <h3>Principais tags semânticas usadas ou exemplificadas</h3>
+                <p>Cada card abaixo resume uma tag importante para organização do documento.</p>
+            </div>
+
+            <div class="card-grid semantic-grid">
+                <article class="semantic-card">
+                    <h4>&lt;header&gt;</h4>
+                    <p>Representa o cabeçalho da página ou de uma seção.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;nav&gt;</h4>
+                    <p>Indica a área de navegação com links para partes do site.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;main&gt;</h4>
+                    <p>Delimita o conteúdo principal e único da página.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;section&gt;</h4>
+                    <p>Agrupa um tema específico dentro do conteúdo.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;article&gt;</h4>
+                    <p>Isola um bloco independente, como notícia, card ou texto próprio.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;aside&gt;</h4>
+                    <p>Mostra conteúdo complementar ao fluxo principal.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;figure&gt;</h4>
+                    <p>Agrupa uma mídia, ilustração ou exemplo visual relacionado.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;figcaption&gt;</h4>
+                    <p>Fornece legenda contextual para a figura.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;time&gt;</h4>
+                    <p>Marca datas e horários de forma compreensível para máquinas.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;mark&gt;</h4>
+                    <p>Destaca trechos importantes sem perder o contexto do texto.</p>
+                </article>
+                <article class="semantic-card">
+                    <h4>&lt;footer&gt;</h4>
+                    <p>Encapsula o rodapé de uma página ou de uma seção.</p>
+                </article>
+            </div>
+
+            <div class="content-grid two-column">
+                <article class="panel">
+                    <h3>Navegação otimizada por teclado</h3>
+                    <p>
+                        Nesta página, a navegação foi simplificada com links reais e um skip link.
+                        Isso evita depender de controles artificiais e faz o percurso com a tecla
+                        <kbd>Tab</kbd> ficar previsível.
+                    </p>
+                    <ul class="checklist">
+                        <li>O primeiro foco útil é o link para pular direto ao conteúdo.</li>
+                        <li>O menu principal usa âncoras sem JavaScript.</li>
+                        <li>Os estados de foco usam <code>:focus-visible</code>.</li>
+                        <li>As seções possuem <code>id</code> para navegação direta.</li>
+                    </ul>
+                </article>
+
+                <figure class="panel code-figure">
+                    <h3>Exemplo aplicado nesta página</h3>
+                    <pre class="code-sample"><code>&lt;a class="skip-link" href="#conteudo"&gt;Pular para o conteúdo principal&lt;/a&gt;
+
+&lt;nav aria-label="Seções principais"&gt;
+  &lt;a href="#html"&gt;HTML e Acessibilidade&lt;/a&gt;
+  &lt;a href="#css"&gt;CSS e Layout&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                    <figcaption>
+                        Links reais funcionam melhor para teclado, leitor de tela e manutenção do que
+                        uma navegação baseada em controles improvisados.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="css" class="section section-css" aria-labelledby="titulo-css">
+            <div class="section-heading">
+                <p class="eyebrow">CSS e Layout</p>
+                <h2 id="titulo-css">Medidas, Flexbox, Grid, Mobile First, responsividade e animações</h2>
+                <p>
+                    CSS não serve apenas para "deixar bonito". Ele organiza o layout, controla
+                    comportamento em diferentes telas e ainda pode comunicar interação com transições
+                    e animações.
+                </p>
+            </div>
+
+            <div class="subsection-heading">
+                <h3>Medidas fixas e relativas</h3>
+                <p>Escolher a unidade certa influencia legibilidade, adaptação e acessibilidade.</p>
+            </div>
+
+            <div class="card-grid measure-grid">
+                <article class="measure-card">
+                    <span class="card-label">px</span>
+                    <h4>Medida fixa</h4>
+                    <p>Boa para bordas, sombras, ícones e pequenos detalhes que precisam de precisão.</p>
+                    <code>border: 2px solid;</code>
+                </article>
+                <article class="measure-card">
+                    <span class="card-label">rem</span>
+                    <h4>Escala a partir da raiz</h4>
+                    <p>Excelente para tipografia e espaçamentos porque respeita o tamanho base do usuário.</p>
+                    <code>padding: 1.5rem;</code>
+                </article>
+                <article class="measure-card">
+                    <span class="card-label">%</span>
+                    <h4>Proporcional ao pai</h4>
+                    <p>Ajuda a criar larguras flexíveis em grids, colunas e blocos fluídos.</p>
+                    <code>width: 100%;</code>
+                </article>
+                <article class="measure-card">
+                    <span class="card-label">vw / vh</span>
+                    <h4>Relativas à viewport</h4>
+                    <p>Úteis em seções de destaque, respiros grandes e composições ligadas à tela.</p>
+                    <code>min-height: 100vh;</code>
+                </article>
+                <article class="measure-card">
+                    <span class="card-label">clamp()</span>
+                    <h4>Escala controlada</h4>
+                    <p>Combina valor mínimo, fluido e máximo para evitar exageros em telas muito grandes.</p>
+                    <code>font-size: clamp(1rem, 2vw, 1.2rem);</code>
+                </article>
+            </div>
+
+            <article class="panel note-panel">
+                <h3>Quando usar cada tipo?</h3>
+                <p>
+                    <strong>Fixas</strong> funcionam bem em detalhes visuais precisos. <strong>Relativas</strong>
+                    são melhores para textos, espaçamentos e blocos que precisam se adaptar a celulares,
+                    tablets e desktops sem quebrar a leitura.
+                </p>
+            </article>
+
+            <div class="subsection-heading">
+                <h3>Flexbox x Grid</h3>
+                <p>Ambos são importantes, mas não resolvem exatamente o mesmo problema.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <article class="comparison-card">
+                    <h4>Flexbox</h4>
+                    <p>
+                        Ideal para distribuir elementos em uma dimensão: linha ou coluna. Nesta página,
+                        ele ajuda no menu, nos grupos de tags e em blocos que precisam alinhar itens
+                        rapidamente.
+                    </p>
+                    <div class="mini-flex" aria-hidden="true">
+                        <span>Menu</span>
+                        <span>Cards</span>
+                        <span>Tags</span>
                     </div>
-                </div>
+                </article>
 
-            </section>
-<!--CSS-->
-            <section class="sec-conteudo sec-css">
+                <article class="comparison-card">
+                    <h4>Grid</h4>
+                    <p>
+                        Ideal para estruturas mais amplas em duas dimensões. Ele foi aplicado nas grades
+                        de cards e nos agrupamentos de conteúdo que mudam de uma coluna para várias
+                        colunas conforme a largura da tela aumenta.
+                    </p>
+                    <div class="mini-grid" aria-hidden="true">
+                        <span>A</span>
+                        <span>B</span>
+                        <span>C</span>
+                        <span>D</span>
+                    </div>
+                </article>
+            </div>
 
-            </section>
-<!--REFERENCIAS-->
-            <section class="sec-conteudo sec-referencias">
+            <div class="content-grid two-column">
+                <article class="panel">
+                    <h3>Responsividade e Mobile First</h3>
+                    <p>
+                        Responsividade é a capacidade do layout se adaptar a diferentes tamanhos de tela.
+                        Neste projeto, a base começa pequena, com uma coluna e foco em leitura. Depois,
+                        as media queries ampliam a composição para tablets e desktops.
+                    </p>
+                    <ul class="checklist">
+                        <li>Base otimizada para telas pequenas.</li>
+                        <li><code>@media (min-width: 48rem)</code> reorganiza colunas e grades.</li>
+                        <li><code>@media (min-width: 75rem)</code> amplia densidade e hierarquia visual.</li>
+                        <li>Menu, cards e seções crescem sem gerar overflow horizontal.</li>
+                    </ul>
+                </article>
 
-            </section>
+                <article class="panel">
+                    <h3>Meta viewport e imagens responsivas</h3>
+                    <p>
+                        O uso da meta viewport garante que o navegador renderize a largura correta em
+                        dispositivos móveis. Já imagens e mídias devem respeitar o contêiner para não
+                        ultrapassar a tela.
+                    </p>
+                    <pre class="code-sample"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 
+img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+                </article>
+            </div>
+
+            <div class="subsection-heading">
+                <h3>Animações em CSS</h3>
+                <p>As demonstrações abaixo mostram transition, transform e keyframes em ação.</p>
+            </div>
+
+            <div class="card-grid demo-grid">
+                <article class="demo-card">
+                    <h4>Transition</h4>
+                    <p>Suaviza a mudança de estado em interações como hover e foco.</p>
+                    <button class="demo-button" type="button">Passe o mouse ou foque aqui</button>
+                </article>
+
+                <article class="demo-card">
+                    <h4>Transform</h4>
+                    <p>Move, gira ou escala elementos para reforçar resposta visual.</p>
+                    <div class="demo-transform-box" tabindex="0">scale + rotate</div>
+                </article>
+
+                <article class="demo-card">
+                    <h4>@keyframes</h4>
+                    <p>Cria animações contínuas para destacar elementos importantes.</p>
+                    <div class="demo-keyframe-badge">Animação contínua</div>
+                </article>
+            </div>
+        </section>
+
+        <section id="referencias" class="section section-references" aria-labelledby="titulo-referencias">
+            <div class="section-heading">
+                <p class="eyebrow">Referências</p>
+                <h2 id="titulo-referencias">Materiais usados como base para teoria e implementação</h2>
+                <p>
+                    Esta seção reúne o PDF fornecido na atividade e documentações estáveis para estudo
+                    complementar e validação dos conceitos apresentados.
+                </p>
+            </div>
+
+            <div class="references-grid">
+                <article class="reference-card">
+                    <h3>Material da disciplina</h3>
+                    <ul class="reference-list">
+                        <li><a href="Medidas, Responsividade e Animações.pdf" target="_blank" rel="noreferrer">PDF: Medidas, Responsividade e Animações</a></li>
+                        <li>Imagens com requisitos da apresentação e conteúdos obrigatórios.</li>
+                    </ul>
+                </article>
+
+                <article class="reference-card">
+                    <h3>HTML e acessibilidade</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics" target="_blank" rel="noreferrer">MDN: Semântica</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/Accessibility" target="_blank" rel="noreferrer">MDN: Acessibilidade na Web</a></li>
+                        <li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noreferrer">W3C WAI: Introdução à acessibilidade</a></li>
+                    </ul>
+                </article>
+
+                <article class="reference-card">
+                    <h3>CSS responsivo</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank" rel="noreferrer">MDN: Valores e unidades</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries" target="_blank" rel="noreferrer">MDN: Media queries</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank" rel="noreferrer">MDN: Flexbox</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_grid_layout" target="_blank" rel="noreferrer">MDN: CSS Grid</a></li>
+                    </ul>
+                </article>
+
+                <article class="reference-card">
+                    <h3>Transições e animações</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/transition" target="_blank" rel="noreferrer">MDN: transition</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform" target="_blank" rel="noreferrer">MDN: transform</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/@keyframes" target="_blank" rel="noreferrer">MDN: @keyframes</a></li>
+                    </ul>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>Projeto desenvolvido pelo Grupo 6 -
-            <time datetime="2026-05-22">Maio de 2026</time>
-        </p>
+    <footer class="site-footer">
+        <p>Projeto desenvolvido pelo Grupo 6 para a disciplina de Desenvolvimento Web.</p>
+        <p><time datetime="2026-05-22">Maio de 2026</time> | Estrutura semântica, CSS modular e navegação acessível.</p>
     </footer>
-    
 </body>
 </html>

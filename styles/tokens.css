@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap");
+
+:root {
+    --paper: #f4efe7;
+    --surface: #fffaf2;
+    --surface-strong: #fffdf8;
+    --ink: #1f2430;
+    --ink-soft: #4d5668;
+    --navy: #203a5f;
+    --navy-strong: #12243d;
+    --accent: #cf5b3e;
+    --accent-strong: #9a3720;
+    --gold: #b68b4d;
+    --line: #d9ccbb;
+    --shadow: 0 1.2rem 2.8rem rgba(18, 36, 61, 0.12);
+    --shadow-soft: 0 0.65rem 1.4rem rgba(18, 36, 61, 0.08);
+    --radius-lg: 1.5rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.6rem;
+    --max-width: 78rem;
+    --transition-base: 180ms ease;
+    --transition-slow: 320ms ease;
+}

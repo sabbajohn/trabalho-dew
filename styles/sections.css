@@ -1,0 +1,49 @@
+.section-home {
+    background:
+        linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(255, 248, 240, 0.94)),
+        var(--surface);
+}
+
+.section-html {
+    background:
+        linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(248, 242, 234, 0.96)),
+        var(--surface);
+}
+
+.section-css {
+    background:
+        linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(245, 239, 230, 0.96)),
+        var(--surface);
+}
+
+.section-references {
+    background:
+        linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(247, 241, 233, 0.98)),
+        var(--surface);
+}
+
+.news-card {
+    border-top: 0.35rem solid var(--accent);
+}
+
+.semantic-card {
+    border-left: 0.35rem solid var(--navy);
+}
+
+.measure-card {
+    border-top: 0.35rem solid var(--gold);
+}
+
+.note-panel {
+    margin-top: 1.15rem;
+    border-style: dashed;
+}
+
+.reference-card a {
+    color: var(--navy);
+}
+
+.reference-card a:hover,
+.reference-card a:focus-visible {
+    color: var(--accent-strong);
+}

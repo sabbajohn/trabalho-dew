@@ -1,0 +1,90 @@
+@media (min-width: 48rem) {
+    html {
+        scroll-padding-top: 9rem;
+    }
+
+    .site-header {
+        position: sticky;
+        top: 0;
+    }
+
+    .brand-row {
+        grid-template-columns: minmax(0, 1.7fr) minmax(16rem, 1fr);
+        align-items: start;
+    }
+
+    .main-nav {
+        gap: 0.8rem;
+    }
+
+    .main-nav a {
+        padding-inline: 1.1rem;
+    }
+
+    .site-main {
+        padding-top: 2rem;
+    }
+
+    .section {
+        scroll-margin-top: 10rem;
+        margin-top: 2rem;
+        padding: 1.8rem;
+    }
+
+    .hero-grid,
+    .two-column,
+    .comparison-grid,
+    .references-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .semantic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .measure-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .demo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 75rem) {
+    .top-ribbon,
+    .brand-row,
+    .main-nav,
+    .site-main,
+    .site-footer {
+        width: min(88vw, var(--max-width));
+    }
+
+    .site-main {
+        padding-top: 2.4rem;
+    }
+
+    .section {
+        padding: 2.4rem;
+    }
+
+    .header-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1.5fr) minmax(18rem, 0.95fr);
+    }
+
+    .semantic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .measure-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
