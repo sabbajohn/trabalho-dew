@@ -1,0 +1,11 @@
+providers = ["staticfile"]
+
+[phases.build]
+cmds = [
+  "rm -rf dist",
+  "mkdir -p dist",
+  "cp index.html dist/index.html",
+  "cp -R styles dist/styles",
+  "find . -maxdepth 1 -type f ! -name '.*' ! -name '*.md' ! -name 'index.html' ! -name 'nixpacks.toml' -exec cp '{}' dist/ ';'",
+  "for dir in assets img images public; do if [ -d \"$dir\" ]; then cp -R \"$dir\" dist/; fi; done"
+]
