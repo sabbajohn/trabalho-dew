@@ -14,7 +14,7 @@
 <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <header class="site-header">
+    <header id="cabecalho-site" class="site-header">
         <div class="top-ribbon">
             <p class="ribbon-label">Edição especial do Grupo 6</p>
             <p class="ribbon-meta"><time datetime="2026-05-22">Maio de 2026</time> | Projeto em HTML e CSS puro</p>
@@ -54,6 +54,27 @@
             <a href="#referencias">Referências</a>
         </nav>
     </header>
+
+    <button
+        class="reader-toggle"
+        type="button"
+        aria-controls="cabecalho-site"
+        aria-expanded="true"
+        aria-label="Esconder cabeçalho"
+        title="Esconder cabeçalho"
+    >
+        <svg class="reader-toggle-icon reader-toggle-icon-hide" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4 5h16"></path>
+            <path d="m8 13 4-4 4 4"></path>
+            <path d="m8 18 4-4 4 4"></path>
+        </svg>
+        <svg class="reader-toggle-icon reader-toggle-icon-show" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4 5h16"></path>
+            <path d="m8 11 4 4 4-4"></path>
+            <path d="m8 16 4 4 4-4"></path>
+        </svg>
+        <span class="reader-toggle-label">Esconder cabeçalho</span>
+    </button>
 
     <main id="conteudo" class="site-main">
         <section id="home" class="section section-home" aria-labelledby="titulo-home">
@@ -453,5 +474,43 @@ img {
         <p>Projeto desenvolvido pelo Grupo 6 para a disciplina de Desenvolvimento Web.</p>
         <p><time datetime="2026-05-22">Maio de 2026</time> | Estrutura semântica, CSS modular e navegação acessível.</p>
     </footer>
+
+    <script>
+        const readerToggle = document.querySelector(".reader-toggle");
+        const siteHeader = document.querySelector("#cabecalho-site");
+        const desktopQuery = window.matchMedia("(min-width: 75rem)");
+        const readerToggleLabel = readerToggle.querySelector(".reader-toggle-label");
+
+        function setHeaderCollapsed(isCollapsed) {
+            const actionLabel = isCollapsed ? "Mostrar cabeçalho" : "Esconder cabeçalho";
+
+            document.documentElement.classList.toggle("header-collapsed", isCollapsed);
+            readerToggle.setAttribute("aria-expanded", String(!isCollapsed));
+            readerToggle.setAttribute("aria-label", actionLabel);
+            readerToggle.title = actionLabel;
+            readerToggleLabel.textContent = actionLabel;
+            siteHeader.toggleAttribute("inert", isCollapsed);
+
+            if (isCollapsed) {
+                siteHeader.setAttribute("aria-hidden", "true");
+            } else {
+                siteHeader.removeAttribute("aria-hidden");
+            }
+        }
+
+        readerToggle.addEventListener("click", () => {
+            if (!desktopQuery.matches) {
+                return;
+            }
+
+            setHeaderCollapsed(!document.documentElement.classList.contains("header-collapsed"));
+        });
+
+        desktopQuery.addEventListener("change", (event) => {
+            if (!event.matches) {
+                setHeaderCollapsed(false);
+            }
+        });
+    </script>
 </body>
 </html>
