@@ -110,41 +110,6 @@
     transform: translateY(-0.08rem);
 }
 
-.reader-toggle {
-    display: none;
-}
-
-.reader-toggle-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-}
-
-.reader-toggle-icon {
-    width: 1.2rem;
-    height: 1.2rem;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.reader-toggle-icon-show {
-    display: none;
-}
-
-.header-collapsed .reader-toggle-icon-hide {
-    display: none;
-}
-
-.header-collapsed .reader-toggle-icon-show {
-    display: block;
-}
-
 .hero-card,
 .news-card,
 .panel,

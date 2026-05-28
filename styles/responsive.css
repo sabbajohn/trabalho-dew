@@ -3,24 +3,9 @@
         scroll-padding-top: 9rem;
     }
 
-    html.header-collapsed {
-        scroll-padding-top: 1.5rem;
-    }
-
     .site-header {
         position: sticky;
         top: 0;
-        transition:
-            opacity var(--transition-base),
-            transform var(--transition-slow);
-    }
-
-    .header-collapsed .site-header {
-        position: fixed;
-        inset: 0 0 auto;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-100%);
     }
 
     .brand-row {
@@ -44,10 +29,6 @@
         scroll-margin-top: 10rem;
         margin-top: 2rem;
         padding: 1.8rem;
-    }
-
-    .header-collapsed .section {
-        scroll-margin-top: 1.5rem;
     }
 
     .hero-grid,
@@ -85,38 +66,6 @@
 
     .site-main {
         padding-top: 2.4rem;
-    }
-
-    .reader-toggle {
-        position: fixed;
-        right: max(6vw, calc((100vw - var(--max-width)) / 2));
-        top: 0.9rem;
-        z-index: 40;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.75rem;
-        min-height: 2.75rem;
-        padding: 0;
-        border: 1px solid rgba(18, 36, 61, 0.14);
-        border-radius: 999px;
-        color: var(--navy-strong);
-        background: rgba(255, 253, 248, 0.92);
-        box-shadow: var(--shadow-soft);
-        cursor: pointer;
-        transition:
-            background-color var(--transition-base),
-            color var(--transition-base),
-            box-shadow var(--transition-base),
-            transform var(--transition-base);
-    }
-
-    .reader-toggle:hover,
-    .reader-toggle:focus-visible {
-        color: var(--surface);
-        background: var(--navy);
-        box-shadow: var(--shadow);
-        transform: translateY(-0.08rem);
     }
 
     .section {
